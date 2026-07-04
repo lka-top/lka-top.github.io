@@ -1,0 +1,24 @@
+# 左侧导航菜单配置
+# 你可以在这里添加类似“首页”、“关于我”、“友链”的按钮
+
+# 每一块 [[social]] 代表下方的社交图标按钮
+[[social]]
+    identifier = "github"
+    name       = "GitHub"                                       # 鼠标悬停时显示的文字
+    url        = "https://github.com/lka-top" # 按钮指向的链接（可改为你的 GitHub）
+
+    [social.params]
+        icon = "brand-github"                                   # 使用的图标名称（主题内置了部分 svg 图标）
+
+[[social]]
+    identifier = "bilibili"
+    name       = "B站"                                  #
+    url        = "https://space.bilibili.com/190840886"    #
+    [social.params]   
+        icon = "bilibili"
+
+# 示例：如果你想要在上面增加一个主要导航按钮（比如首页）：
+# [[main]]
+#     name = "首页"
+#     url = "/"
+#     weight = -100

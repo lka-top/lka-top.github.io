@@ -1,0 +1,33 @@
+# 网站根目录（一般本地调试用 localhost 即可，部署上线后改为你的实际域名）
+baseURL                = "https://lka-top.github.io/"
+
+# 网站本地语言（有助于搜索引擎和浏览器识别区域）
+locale                 = "zh-cn"
+
+# 网站默认标题
+title                  = "lka博客"
+
+# 主题的多语言支持：默认语言，指向 languages.toml 里的 [zh]
+defaultContentLanguage = "zh"
+
+# 如果主要内容是中日韩(CJK)语言，请设为 true，Hugo 才能正确统计字数和生成摘要
+hasCJKLanguage         = true
+
+# 指定使用的主题
+theme = "hugo-theme-stack"
+
+# 分页配置
+[pagination]
+    # 首页及列表页，每页显示多少篇文章
+    pagerSize = 4
+
+# 链接格式配置
+[permalinks]
+    # 博客文章的链接生成规则（这里代表使用 "/p/文章缩略名/" 格式）
+    post = "/p/:slug/"
+    # 普通页面的链接生成规则
+    page = "/:slug/"
+
+# 默认评论系统短名称（不用管，在 params.toml 中会详细配置）
+[services.disqus]
+    shortname = "hugo-theme-stack"

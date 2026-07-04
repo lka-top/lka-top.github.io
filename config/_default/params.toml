@@ -1,0 +1,59 @@
+# 左侧边栏、网站基本外观和卡片配置中心
+
+# 首页默认展示哪些目录下的内容（这里指定为 "post" 目录，也就是你的文章）
+mainSections   = ["post"]
+
+# RSS 订阅是否包含全文
+rssFullContent = true
+
+# 网站浏览器标签页上的小图标路径（放到 static 文件夹里）
+favicon        = "img/avatar.png"
+
+# 页脚配置
+[footer]
+    # 网站创立年份（版权声明起始年）
+    since = 2026
+
+# 🌟左侧边栏配置（最常修改）
+[sidebar]
+    # 你名字旁边的 Emoji 图标
+    emoji    = "+"
+    # 你名字下方的副标题 / 座右铭
+    subtitle = "记录生活，分享知识。"
+    # 你的头像图片路径（将头像放在 static/img/ 文件夹下）
+    avatar   = "img/avatar.png"
+
+# 文章详情页配置
+[article]
+    # 文章底部的版权声明
+    [article.license]
+        # 是否开启版权声明（不需要的话改为 false）
+        enabled = true
+        # 版权声明的内容
+        default = "Licensed under [CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/)"
+
+# 右侧小组件卡片配置
+[widgets]
+    # 首页右侧显示的卡片（可以自由增删或调整顺序）
+    homepage = [
+        { type = "search" },                                # 搜索栏
+        { type = "archives", params = { limit = 5 } },      # 归档（显示最近的5篇）
+        { type = "categories", params = { limit = 10 } },   # 分类（最多显示10个）
+        { type = "tag-cloud", params = { limit = 10 } },    # 标签云（最多显示10个）
+    ]
+    # 文章详情页右侧显示的卡片
+    page     = [{ type = "toc" }]                           # 文章目录 (Table of Contents)
+
+# 评论系统配置
+[comments]
+    # 是否开启评论功能
+    enabled  = false
+    # 使用哪家评论服务（默认 disqus，国内可选 twikoo, waline, giscus 等）
+    provider = "disqus"
+
+# 欧盟 GDPR Cookie 隐私弹窗（中国大陆通常不需要，保持 false 即可）
+[cookies]
+    enabled = false
+    [cookies.categories]
+        analytics  = true
+        functional = true
